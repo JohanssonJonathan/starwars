@@ -45,11 +45,13 @@ const Image = styled("img")`
 
   @media only screen and (min-width: 800px) {
     width: 300px;
+    height: 511px;
     margin: 20px;
   }
 
   @media only screen and (min-width: 1200px) {
     width: 400px;
+    height: 611px;
   }
 `;
 
