@@ -56,6 +56,8 @@ const Image = styled("img")`
 const Description = styled("div")`
   position: absolute;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   margin: auto;
   width: 70%;
   height: 100%;
@@ -92,14 +94,18 @@ const List = ({ movies }) => {
 
   return (
     <Wrapper>
-      {movies.map(({ fields: { title, opening_crawl } }, i) => {
+      {movies.map(({ fields: { title, opening_crawl, release_date } }, i) => {
         const foundImage = images.find((item) =>
           title.toLowerCase().includes(item.name.toLowerCase())
         );
         return (
           <Content key={i}>
             <Image src={foundImage && foundImage.src} />
-            <Description>{opening_crawl}</Description>
+            <Description>
+              <h3>{title}</h3>
+              <p>{opening_crawl}</p>
+              <span>Release date: {release_date}</span>
+            </Description>
           </Content>
         );
       })}
