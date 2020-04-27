@@ -10,7 +10,14 @@ const Wrapper = styled("div")`
 `;
 
 const ErrorMessage = styled("h2")`
-  align-self: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   color: white;
   font-weight: 300;
 `;
